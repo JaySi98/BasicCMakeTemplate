@@ -33,6 +33,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES ENABLE_EXPORTS ON)
 
 target_link_libraries(UnitTests PUBLIC
     ${GTEST_BOTH_LIBRARIES}
+    ${EXTRA_LINKS}
 )
 
 # doesn't do anything on Linux
