@@ -1,13 +1,32 @@
-Komenda do uruchomienia Cmake:
-    cmake -S <scieżka do źródeł> -B <ścieżka wyjściowa> 
+Description:
 
-Komenda do uruchomienia makefile z innego folderu:
-    make -C <scieżka>
-
-Ustawienie zmiennej w cmake:   
-    cmake -D<nazwa zmiennej>=OFF/ON ..
+Prerequisites:
 
 
-Komendy:
-    chmod +x Scripts/configure.sh  Scripts/build.sh  Scripts/run.sh
-    ./Scripts/configure.sh
+How to build project without using included scripts:
+
+First config:
+    cmake -S <path/to/CMakeList> -B <output/path>
+
+Set cmake variable:   
+    cmake -D<varibiable name>=OFF/ON
+
+Build:
+    make -C <output/path>
+
+Run project:
+    ./<output/path>/<project name>
+
+How to build project using included scripts:
+First config:
+    Scripts/config.sh
+
+Build:
+    Scripts/build.sh
+
+Run project:
+    Scripts/run.sh
+
+Run tests:
+    Scripts/runTests.sh
+
